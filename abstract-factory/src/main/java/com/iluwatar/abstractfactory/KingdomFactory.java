@@ -34,4 +34,5 @@ public interface KingdomFactory {
 
   Army createArmy();
 
+  Wizard createWizard();
 }

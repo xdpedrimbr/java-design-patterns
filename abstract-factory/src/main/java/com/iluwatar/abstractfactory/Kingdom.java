@@ -43,7 +43,7 @@ public class Kingdom {
      * Enumeration for the different types of Kingdoms.
      */
     public enum KingdomType {
-      ELF, ORC
+      ELF, ORC, Dalton
     }
 
     /**
@@ -55,6 +55,8 @@ public class Kingdom {
           return new ElfKingdomFactory();
         case ORC:
           return new OrcKingdomFactory();
+        case Dalton:
+         return (KingdomFactory) new MageWizardDalton();
         default:
           throw new IllegalArgumentException("KingdomType not supported.");
       }
